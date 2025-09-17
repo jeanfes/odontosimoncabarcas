@@ -1,0 +1,47 @@
+.welcome-banner {
+  width: 100%;
+  padding: 14rem 2rem;
+  background-color: var(--maron);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  &__title {
+    font-size: 6rem;
+    font-weight: 700;
+    z-index: 2;
+  }
+
+  &__tooth {
+    position: absolute;
+    bottom: -70px;
+    left: 10%;
+    width: 14rem;
+    transform: rotate(0deg);
+    animation: toothMove 2.5s infinite ease-in-out;
+    transform-origin: center bottom;
+    z-index: 1;
+    transition: transform 0.3s;
+  }
+}
+
+@keyframes toothMove {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(8deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}

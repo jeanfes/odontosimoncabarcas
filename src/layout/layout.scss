@@ -1,0 +1,11 @@
+.layout {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+
+  .layout__main {
+    height: auto;
+  }
+}
