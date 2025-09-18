@@ -41,6 +41,7 @@ body {
   --cta-text: var(--white);
   --accent: var(--gold);
   --font-family: "Manrope", sans-serif;
+  --font-family-alt: "Red Hat Display", sans-serif;
   --heading-font-weight: 700;
   --base-font-weight: 400;
   --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);

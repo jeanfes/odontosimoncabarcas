@@ -1,0 +1,33 @@
+.react-select__option,
+.react-select__menu {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.react-select__option:active {
+  background: rgba(212, 175, 55, 0.12) !important;
+  color: var(--text-color) !important;
+}
+
+.react-select__option ::selection {
+  background: transparent;
+  color: inherit;
+}
+
+.react-select__menu {
+  z-index: 99999 !important;
+}
+
+.react-select__option--is-focused {
+  background: rgba(212, 175, 55, 0.08) !important;
+  color: var(--text-color) !important;
+}
+
+.react-select__option--is-selected {
+  background: var(--accent) !important;
+  color: var(--white) !important;
+}
+
+.react-select__indicator-separator {
+  display: none !important;
+}

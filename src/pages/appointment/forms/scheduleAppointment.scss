@@ -1,23 +1,17 @@
-/* scheduleAppointment.scss */
-
-/* contenedor principal del formulario (ya lo tienes así) */
 .appointment-form {
   width: 55%;
-  min-width: 360px;
+  min-width: max-content;
   display: flex;
   flex-direction: column;
-  padding: 3.6rem 3.2rem;
-  border-radius: 12px;
-  background-color: var(--header-bg);
-  gap: 2.4rem;
-  box-shadow: var(--shadow-soft);
-  font-family: var(--font-family);
+  padding: 4rem 4.4rem;
+  border-radius: 8px;
+  background-color: rgb(246 247 249);
+  gap: 2.6rem;
 
-  /* filas de inputs (nombre + apellido) */
   .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
+    gap: 1rem;
 
     input {
       flex: 1;
@@ -27,248 +21,66 @@
   .field-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1.2rem;
 
     label {
-      font-size: 1.6rem;
-      font-weight: var(--heading-font-weight);
+      font-size: 1.8rem;
+      font-weight: 600;
       color: var(--text-color);
     }
   }
 
-  /* INPUTS / SELECT natvo (para compatibilidad) */
   input,
   select {
     width: 100%;
-    height: 5rem;
-    padding: 1.2rem 1.4rem;
+    height: 5.2rem;
+    max-height: 5.2rem;
+    padding: 1.4rem 1.8rem;
     border-radius: 8px;
     border: 1px solid var(--grey);
-    font-size: 1.4rem;
-    background: var(--white);
-    color: var(--text-color);
-    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+    font-size: 1.6rem;
     font-family: var(--font-family);
-
-    &::placeholder {
-      color: var(--muted-text);
-    }
+    background: transparent;
+    color: var(--text-color);
+    transition: border-color 0.3s, box-shadow 0.3s;
 
     &:focus {
       border-color: var(--accent);
       outline: none;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    &::placeholder {
+      color: var(--muted-text);
+      opacity: 0.8;
+    }
+
+    &:disabled {
+      background: #f5f5f5;
+      cursor: not-allowed;
     }
   }
 
-  /* Mensaje de error (debajo del campo) */
   .error {
     color: var(--accent);
-    font-size: 1.3rem;
-    margin-top: 0.4rem;
-    font-weight: 500;
+    font-size: 1.4rem;
   }
 
-  /* BOTÓN (si usas tu componente Button se puede ignorar) */
   .submit-btn {
     margin-top: 1rem;
     background: var(--cta-bg);
     color: var(--cta-text);
     border: 2px solid var(--cta-border);
-    padding: 1rem 1.6rem;
+    padding: 1.2rem;
     border-radius: 25px;
     cursor: pointer;
     font-weight: var(--heading-font-weight);
     font-size: 1.6rem;
-    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    transition: 0.3s;
 
     &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    }
-  }
-
-  /* -------------------------
-     STYLES para React DayPicker
-     (usa clases .rdp-... que vienen con la librería)
-     ------------------------- */
-  .rdp {
-    font-family: var(--font-family);
-    color: var(--text-color);
-
-    &-caption {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 0.6rem;
-
-      .rdp-caption_label {
-        font-weight: var(--heading-font-weight);
-        font-size: 1.4rem;
-        color: var(--text-color);
-      }
-
-      .rdp-nav {
-        button {
-          background: transparent;
-          border: none;
-          color: var(--secondary-color);
-          cursor: pointer;
-          padding: 0.2rem 0.6rem;
-          border-radius: 6px;
-
-          &:hover {
-            background: rgba(0,0,0,0.04);
-          }
-        }
-      }
-    }
-
-    &-month {
-      background: transparent;
-      padding: 0;
-      border-radius: 8px;
-    }
-
-    &-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 1.3rem;
-    }
-
-    &-head {
-      .rdp-head_cell {
-        color: var(--muted-text);
-        font-weight: 600;
-        padding-bottom: 0.6rem;
-      }
-    }
-
-    &-row {
-      .rdp-day {
-        width: 2.8rem;
-        height: 2.8rem;
-        display: inline-grid;
-        place-items: center;
-        margin: 0.25rem;
-        border-radius: 6px;
-        cursor: pointer;
-        color: var(--text-color);
-        transition: background 0.12s ease, transform 0.06s ease;
-      }
-    }
-
-    /* día normal hover */
-    .rdp-day:not(.rdp-day_outside):not(.rdp-day_disabled):hover {
-      background: rgba(0,0,0,0.04);
-      transform: translateY(-2px);
-    }
-
-    /* día seleccionado */
-    .rdp-day_selected {
-      background: var(--accent) !important;
-      color: var(--white) !important;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-      border-radius: 8px !important;
-    }
-
-    /* día fuera del mes */
-    .rdp-day_outside {
-      color: var(--muted-text);
-      opacity: 0.6;
-    }
-
-    /* deshabilitados */
-    .rdp-day_disabled {
-      color: var(--muted-text);
-      cursor: not-allowed;
-      opacity: 0.5;
-    }
-  }
-
-  /* contenedor que envuelve al calendario para darle spacing */
-  .rdp-wrapper {
-    border-radius: 8px;
-    padding: 0.8rem;
-  }
-
-  /* -------------------------
-     React-Select (clases por defecto)
-     ------------------------- */
-
-  /* control principal (match height with inputs) */
-  .react-select__control,
-  .rs__control {
-    min-height: 5rem;
-    height: 5rem;
-    border-radius: 8px;
-    border: 1px solid var(--grey);
-    box-shadow: none;
-    transition: border-color 0.18s ease, box-shadow 0.18s ease;
-    background: var(--white);
-  }
-
-  .react-select__control--is-focused {
-    border-color: var(--accent);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  }
-
-  /* value / placeholder */
-  .react-select__single-value,
-  .react-select__placeholder {
-    font-size: 1.4rem;
-    color: var(--text-color);
-    margin-left: 0.2rem;
-    font-family: var(--font-family);
-  }
-
-  /* dropdown menu */
-  .react-select__menu {
-    border-radius: 8px;
-    box-shadow: var(--shadow-soft);
-    overflow: hidden;
-  }
-
-  .react-select__option {
-    font-size: 1.4rem;
-    padding: 0.9rem 1.2rem;
-    cursor: pointer;
-  }
-
-  .react-select__option--is-focused {
-    background: rgba(0,0,0,0.04);
-  }
-
-  .react-select__option--is-selected {
-    background: var(--accent);
-    color: var(--white);
-  }
-
-  /* if you're using styles-in-js classnames different, add them too:
-     .rs__control, .rs__menu, .rs__option, etc. */
-
-  /* -------------------------
-     Responsive tweaks
-     ------------------------- */
-  @media (max-width: 900px) {
-    width: 100%;
-    padding: 2.4rem;
-    gap: 1.6rem;
-
-    .form-row {
-      grid-template-columns: 1fr;
-    }
-
-    .rdp {
-      .rdp-day {
-        width: 2.6rem;
-        height: 2.6rem;
-      }
-    }
-
-    .react-select__control {
-      min-height: 4.8rem;
-      height: 4.8rem;
+      background: var(--accent);
+      color: var(--black);
+      border-color: var(--accent);
     }
   }
 }

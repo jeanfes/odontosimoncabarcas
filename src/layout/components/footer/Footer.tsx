@@ -145,9 +145,6 @@ export const Footer = () => {
         </div>
 
         <div className="footer__bottom">
-          <div className="footer__links">
-            <a href="#contact">Contacto</a>
-          </div>
           <div className="footer__copyright">
             © {new Date().getFullYear()} Simon Cabarcas. Todos los derechos
             reservados.

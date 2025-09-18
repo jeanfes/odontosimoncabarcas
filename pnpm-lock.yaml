@@ -11,6 +11,9 @@ importers:
       '@uidotdev/usehooks':
         specifier: ^2.4.1
         version: 2.4.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      date-fns:
+        specifier: ^4.1.0
+        version: 4.1.0
       dom:
         specifier: ^0.0.3
         version: 0.0.3

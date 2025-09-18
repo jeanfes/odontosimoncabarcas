@@ -1,6 +1,6 @@
 import { WelcomeBanner } from "../../components/welcomeBanner/WelcomeBanner";
 import { ScheduleAppointment } from "./forms/ScheduleAppointment";
-import { FaInstagram } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 import "./appointment.scss";
 
 const Socials = () => {
@@ -14,7 +14,7 @@ const Socials = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaInstagram width={32} height={32} size={32}/>
+          <AiFillInstagram width={34} height={34} size={34}/>
         </a>
       </div>
     </div>

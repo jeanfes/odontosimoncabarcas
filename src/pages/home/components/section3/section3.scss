@@ -11,6 +11,7 @@
       font-size: 4.6rem;
       font-weight: 900;
       color: var(--primary-color);
+      font-family: var(--font-family-alt);
       margin-bottom: 1.2rem;
     }
 
@@ -42,68 +43,13 @@
     @media (max-width: 900px) {
       grid-template-columns: 1fr;
     }
-
-    .card {
-      position: relative;
-      border-radius: 1.2rem;
-      overflow: hidden;
-      width: 100%;
-      height: 45rem;
-      box-shadow: var(--shadow-soft);
-      background: #000;
-
-      &__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.4s ease;
-        display: block;
-      }
-
-      &:hover .card__image {
-        transform: scale(1.05);
-      }
-
-      &__overlay {
-        cursor: pointer;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 2rem;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
-        color: var(--white);
-
-        .card__tag {
-          width: fit-content;
-          background: rgba(255, 255, 255, 0.2);
-          padding: 0.6rem 1.2rem;
-          border-radius: 2rem;
-          font-size: 1.3rem;
-          font-weight: 600;
-          margin-bottom: 1rem;
-        }
-
-        p {
-          font-size: 1.4rem;
-          line-height: 1.6;
-          font-weight: var(--base-font-weight);
-          max-width: 90%;
-        }
-      }
-    }
   }
 
   &__sidebar {
     flex: 0.8;
     display: flex;
     flex-direction: column;
-    gap: 2.6rem;
+    gap: 3.2rem;
     background: var(--header-bg);
     border-radius: 1.2rem;
     padding: 2.5rem;

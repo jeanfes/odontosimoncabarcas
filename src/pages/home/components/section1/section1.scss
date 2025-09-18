@@ -4,7 +4,7 @@
     background-image: url("../../../../assets/images/section1-bg.jpg");
     background-size: cover;
     background-position: center;
-    padding: 180px 30px 120px;
+    padding: 180px 30px 180px;
 
     .section1__content {
       width: 100%;
@@ -21,7 +21,7 @@
 
         p {
           max-width: 700px;
-          font-family: var(--font-family);
+          font-family: var(--font-family-alt);
           font-style: normal;
           font-weight: 900;
           font-size: 70px;

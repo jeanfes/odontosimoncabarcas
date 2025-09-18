@@ -5,7 +5,7 @@
 
   .appointment-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 6rem;
     width: 100%;
     max-width: 120rem;
@@ -28,9 +28,10 @@
 
     .phone {
       font-size: 3rem;
-      font-weight: var(--heading-font-weight);
-      margin: 0.8rem 0;
+      font-weight: 800;
       color: var(--secondary-color);
+      font-family: var(--font-family-alt);
+      margin: 0.8rem 0;
     }
 
     .description {

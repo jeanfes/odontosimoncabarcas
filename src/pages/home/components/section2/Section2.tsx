@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../../../../components/button/Button";
 import "./section2.scss";
+import { useNavigate } from "react-router-dom";
 
 type Card = {
   title: string;
@@ -41,6 +42,12 @@ const cards: Card[] = [
 ];
 
 export const Section2: React.FC = () => {
+  const navigate = useNavigate();
+
+  const go = (path: string) => {
+    navigate(path);
+  };
+
   return (
     <section className="section2" aria-label="Servicios dentales destacados">
       <div className="section2__content">
@@ -71,7 +78,11 @@ export const Section2: React.FC = () => {
                 </div>
 
                 <div className="section2__card-action">
-                  <Button aria-label={`Agenar ${card.title}`} text="AGENDAR" />
+                  <Button
+                    aria-label={`Agenar ${card.title}`}
+                    text="AGENDAR"
+                    onClick={() => go("/agenda-tu-cita")}
+                  />
                 </div>
               </div>
             </article>
