@@ -5,7 +5,7 @@ interface CardServiceProps {
   image?: string;
   alt?: string;
   tag: string;
-  title: string;
+  title?: string;
   description?: string;
   onClick?: () => void;
 }
@@ -24,7 +24,7 @@ export const CardService: React.FC<CardServiceProps> = ({
       <div className="card__overlay">
         <span className="card__tag">{tag}</span>
         <div className="card__info">
-          <h3 className="card__title">{title}</h3>
+          {title && <h3 className="card__title">{title}</h3>}
           <p>{description}</p>
         </div>
       </div>
