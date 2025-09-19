@@ -13,5 +13,9 @@ export type Service = {
   intro?: string;
   images?: string[];
   description?: string;
+  doctor?: {
+    name: string;
+    image?: string;
+  }
   sections?: ServiceSection[];
 };

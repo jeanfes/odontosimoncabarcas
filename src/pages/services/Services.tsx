@@ -34,9 +34,10 @@ const Services: React.FC = () => {
           {services.slice(0, visibleCount).map((service, idx) => (
             <CardService
               key={service.tag + idx}
-              image={service.image}
+              image={service?.doctor?.image}
               alt={service.alt}
               tag={service.tag}
+              title={service?.doctor?.name ?? ""}
               description={service.description}
               onClick={() => handleNavigateToService(service)}
             />

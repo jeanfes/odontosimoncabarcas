@@ -7,7 +7,7 @@
   &__content {
     max-width: 140rem;
     margin: 0 auto;
-    padding: 4.2rem 2.4rem 8rem;
+    padding: 4.2rem 3rem 8rem;
     box-sizing: border-box;
     display: block;
   }
@@ -36,8 +36,10 @@
 
     &-img {
       width: 100%;
-      max-height: 48rem;
+      max-width: 700px;
       height: auto;
+      max-height: 48rem;
+      aspect-ratio: 16/9;
       object-fit: cover;
       border-radius: 0.8rem;
       box-shadow: var(--shadow-soft);
@@ -81,7 +83,10 @@
     .section__image {
       margin-top: 1.6rem;
       img {
+        display: block;
         width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
         max-height: 48rem;
         height: auto;
         object-fit: cover;
@@ -108,12 +113,15 @@
   .info-service {
     &__content {
       max-width: 64rem;
-      padding: 3.2rem 2rem 6rem;
+      padding: 3.2rem 0rem 6rem;
       font-size: 1.6rem;
     }
 
     &__hero &-img {
-      max-height: 28rem;
+      max-width: 100%;
+      max-height: 20rem;
+      aspect-ratio: 16/9;
+      border-radius: 0.6rem;
     }
   }
 }
@@ -140,7 +148,9 @@
     }
 
     &__hero &-img {
-      max-height: 20rem;
+      max-width: 100%;
+      max-height: 14rem;
+      aspect-ratio: 16/9;
       border-radius: 0.6rem;
     }
 

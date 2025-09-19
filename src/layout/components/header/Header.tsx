@@ -76,7 +76,7 @@ export const Header: React.FC = () => {
                     <li role="menuitem" onClick={() => go("/servicios")}>
                       Servicios
                     </li>
-                    <li role="menuitem" onClick={() => go("/resenas")}>
+                    <li role="menuitem" onClick={() => go("/reseñas")}>
                       Reseñas
                     </li>
                   </ul>

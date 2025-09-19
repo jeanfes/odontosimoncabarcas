@@ -2,9 +2,12 @@ import InfoService from "../pages/services/pages/infoService/InfoService";
 import Appointment from "../pages/appointment/Appointment";
 import Services from "../pages/services/Services";
 import NotFound from "../pages/notFound/NotFound";
-import { useRoutes } from "react-router-dom";
+import Reviews from "../pages/reviews/Reviews";
+import About from "../pages/about/About";
 import Home from "../pages/home/Home";
 import Layout from "../layout/Layout";
+// React Router
+import { useRoutes } from "react-router-dom";
 
 const Router = () => {
   const routes = useRoutes([
@@ -30,7 +33,11 @@ const Router = () => {
         },
         {
           path: "/reseñas",
-          element: <Appointment />,
+          element: <Reviews />,
+        },
+        {
+          path: "/acerca-de",
+          element: <About />,
         },
         // RUTA 404 - Página no encontrada
         {
