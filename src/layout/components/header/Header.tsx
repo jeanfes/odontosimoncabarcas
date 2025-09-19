@@ -9,6 +9,7 @@ export const Header: React.FC = () => {
   const navigate = useNavigate();
   const headerRef = useRef<HTMLElement | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const sentinel = document.getElementById("top-sentinel");
@@ -28,6 +29,7 @@ export const Header: React.FC = () => {
   }, []);
 
   const go = (path: string) => {
+    setMenuOpen(false); // cerrar menú al navegar
     navigate(path);
   };
 
@@ -38,12 +40,15 @@ export const Header: React.FC = () => {
       role="banner"
     >
       <div className="header__inner">
+        {/* Logo */}
         <img
           className="header__img"
           src={LogoGold}
           alt="Logo Simón Cabarcas"
           onClick={() => navigate("/")}
         />
+
+        {/* NAV desktop */}
         <nav className="header__nav" role="navigation" aria-label="Main">
           <div className="header__nav-left">
             <div className="nav__item nav__item--dropdown" tabIndex={0}>
@@ -86,7 +91,7 @@ export const Header: React.FC = () => {
 
             <button
               className="nav__item"
-              onClick={() => navigate("/servicios")}
+              onClick={() => go("/servicios")}
               aria-label="Services"
             >
               <span className="nav__label">SERVICIOS</span>
@@ -95,10 +100,38 @@ export const Header: React.FC = () => {
             <Button
               text="AGENDAR UNA CITA"
               design="primary"
-              onClick={() => navigate("/agenda-tu-cita")}
+              onClick={() => go("/agenda-tu-cita")}
             />
           </div>
         </nav>
+
+        {/* Botón Hamburguesa (solo mobile) */}
+        <button
+          className={`menu-toggle ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Abrir menú"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      {/* NAV Mobile */}
+      <div className={`mobile-nav ${menuOpen ? "open" : ""}`}>
+        <ul>
+          <li onClick={() => go("/")}>Inicio</li>
+          <li onClick={() => go("/acerca-de")}>Acerca de</li>
+          <li onClick={() => go("/servicios")}>Servicios</li>
+          <li onClick={() => go("/reseñas")}>Reseñas</li>
+          <li>
+            <Button
+              text="AGENDAR UNA CITA"
+              design="primary"
+              onClick={() => go("/agenda-tu-cita")}
+            />
+          </li>
+        </ul>
       </div>
     </header>
   );

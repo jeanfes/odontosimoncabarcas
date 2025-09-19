@@ -14,7 +14,7 @@ export const Section1 = () => {
       <div className="section1__content">
         <div className="section1__text">
           <p>
-            Arregla tu sonrisa, recupera tu <br /> confianza
+            Arregla tu sonrisa, recupera tu confianza
           </p>
           <span>
             Atención odontológica profesional y personalizada para cuidar tu

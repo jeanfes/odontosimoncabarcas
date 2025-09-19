@@ -10,23 +10,39 @@
   overflow: hidden;
 
   &__title {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 700;
     text-align: center;
     font-family: var(--font-family-alt);
     z-index: 2;
+    line-height: 1.1;
+    padding: 0 1rem;
   }
 
   &__tooth {
     position: absolute;
-    bottom: -70px;
+    bottom: -40px;
     left: 10%;
-    width: 14rem;
+    width: 8rem;
     transform: rotate(0deg);
     animation: toothMove 2.5s infinite ease-in-out;
     transform-origin: center bottom;
     z-index: 1;
     transition: transform 0.3s;
+    @media (max-width: 768px) {
+      .welcome-banner {
+        padding: 4rem 0.6rem;
+      }
+      .welcome-banner__title {
+        font-size: 2.2rem;
+        padding: 0 0.4rem;
+      }
+      .welcome-banner__tooth {
+        width: 4.2rem;
+        bottom: -18px;
+        left: 5%;
+      }
+    }
   }
 }
 
