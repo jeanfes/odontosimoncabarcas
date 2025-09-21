@@ -149,9 +149,9 @@
 .footer-nav {
   display: flex;
   gap: 3.2rem;
-  align-items: flex-start;
+  align-items: flex-end;
   flex: 1;
-  justify-content: space-between;
+  justify-content: flex-end;
   box-sizing: border-box;
 }
 

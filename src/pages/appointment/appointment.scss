@@ -52,11 +52,13 @@
       .icons {
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: 1.8rem;
         font-size: 2.8rem;
         color: var(--secondary-color);
 
         a {
+          display: flex;
+          align-items: center;
           color: var(--secondary-color);
           transition: color 0.3s, transform 0.2s;
 
@@ -68,7 +70,7 @@
           /* separador vertical */
           & + a {
             border-left: 1px solid var(--grey);
-            padding-left: 2rem;
+            padding-left: 1.6rem;
           }
         }
       }

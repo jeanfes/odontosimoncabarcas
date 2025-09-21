@@ -1,6 +1,6 @@
 import { WelcomeBanner } from "../../components/welcomeBanner/WelcomeBanner";
 import { ScheduleAppointment } from "./forms/ScheduleAppointment";
-import { AiFillInstagram } from "react-icons/ai";
+import { AiFillFacebook, AiFillInstagram, AiFillTikTok } from "react-icons/ai";
 import "./appointment.scss";
 
 const Socials = () => {
@@ -9,12 +9,28 @@ const Socials = () => {
       <p className="title">Sigueme En</p>
       <div className="icons">
         <a
+          href="https://www.tiktok.com/@dr.simoncabarcas"
+          aria-label="TikTok"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <AiFillTikTok width={40} height={40} size={40} />
+        </a>
+        <a
           href="https://www.instagram.com/odontsimoncabarcas"
           aria-label="Instagram"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <AiFillInstagram width={34} height={34} size={34}/>
+          <AiFillInstagram width={40} height={40} size={40} />
+        </a>
+        <a
+          href="https://www.facebook.com/289470090924482?ref=pl_edit_xav_ig_profile_page_web"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <AiFillFacebook width={40} height={40} size={40} />
         </a>
       </div>
     </div>

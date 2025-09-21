@@ -11,16 +11,17 @@ export const Footer = () => {
       >
         <div className="footer__hero-overlay" />
         <div className="footer__cards">
+          {/* Card: Horario */}
           <div className="info-card info-card--hours" aria-hidden={false}>
             <h4 className="info-card__title">Horario de Atención</h4>
             <ul className="info-card__list">
               <li>
                 <span className="info-card__label">Lunes - Viernes</span>
-                <span className="info-card__value">09:00-18:00</span>
+                <span className="info-card__value">07:00 - 18:00</span>
               </li>
               <li>
                 <span className="info-card__label">Sábado</span>
-                <span className="info-card__value">10:00-16:00</span>
+                <span className="info-card__value">07:00 - 17:00</span>
               </li>
               <li>
                 <span className="info-card__label">Domingo</span>
@@ -29,49 +30,50 @@ export const Footer = () => {
             </ul>
           </div>
 
+          {/* Card: Ubicación y Contacto */}
           <div className="info-card info-card--office">
             <h4 className="info-card__title">Ubicación de la Oficina</h4>
             <ul className="info-card__list">
               <li>
-                <span className="info-card__label">Lugar</span>
+                <span className="info-card__label">Dirección</span>
                 <span className="info-card__value">
-                  Junto a la Preparatoria
+                  Cl. 45 #20-158, Barranquilla, Atlántico
                 </span>
               </li>
               <li>
                 <span className="info-card__label">Teléfono</span>
-                <span className="info-card__value">(555) 555-0123</span>
+                <span className="info-card__value">+57 304 364 5769</span>
               </li>
               <li>
                 <span className="info-card__label">Correo</span>
-                <span className="info-card__value">contacto@ejemplo.com</span>
+                <span className="info-card__value">
+                  simoncabarcas@gmail.com
+                </span>
               </li>
             </ul>
           </div>
 
+          {/* Card: Servicios Destacados */}
           <div className="info-card info-card--service">
-            <h4
-              className="info-card__title"
-              style={{
-                color: "var(--white)",
-              }}
-            >
-              Ubicación del Servicio
+            <h4 className="info-card__title" style={{ color: "var(--white)" }}>
+              Servicios Destacados
             </h4>
             <ul className="info-card__list">
               <li>
-                <span className="info-card__label">Lugar</span>
+                <span className="info-card__label">Ortodoncia</span>
+                <span className="info-card__value">Brackets y alineadores</span>
+              </li>
+              <li>
+                <span className="info-card__label">Estética Dental</span>
                 <span className="info-card__value">
-                  SmileCare Dental Studio
+                  Blanqueamiento y carillas
                 </span>
               </li>
               <li>
-                <span className="info-card__label">Teléfono</span>
-                <span className="info-card__value">(123) 456-7890</span>
-              </li>
-              <li>
-                <span className="info-card__label">Correo</span>
-                <span className="info-card__value">servicios@ejemplo.com</span>
+                <span className="info-card__label">Implantes</span>
+                <span className="info-card__value">
+                  Reemplazo de piezas dentales
+                </span>
               </li>
             </ul>
           </div>
@@ -83,43 +85,19 @@ export const Footer = () => {
           <div className="footer-brand">
             <div className="footer-brand__text">
               <div className="footer-brand__logo">
-                <img src={LogoMaron} alt="Logo Simón Cabarcas" />
+                <img src={LogoMaron} alt="Logo Clínica Dental Marón" />
               </div>
               <div className="footer-brand__tag">
-                Tu sonrisa es nuestra prioridad.
+                Tu sonrisa, nuestra pasión.
               </div>
             </div>
           </div>
 
           <nav className="footer-nav" aria-label="Navegación del pie de página">
-            <div className="footer-nav__col">
-              <h5 className="footer-nav__title">Servicios</h5>
-              <ul>
-                <li>
-                  <a href="#oral">Higiene Oral</a>
-                </li>
-                <li>
-                  <a href="#retainer">Colocación de Retenedores</a>
-                </li>
-                <li>
-                  <a href="#prevent">Cuidado Preventivo</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="footer-nav__col">
-              <h5 className="footer-nav__title">Horario</h5>
-              <ul>
-                <li>Dom: CERRADO</li>
-                <li>Lun a Dom: 9 AM - 7 PM</li>
-                <li>Sáb a Vie: 10 AM - 7 PM</li>
-              </ul>
-            </div>
-
             <div className="footer-nav__col footer-nav__newsletter">
               <h5 className="footer-nav__title">Boletín</h5>
               <p className="footer-nav__desc">
-                Descubre nuevas ofertas y mantente al día
+                Suscríbete y recibe tips de cuidado dental
               </p>
               <form className="newsletter" onSubmit={(e) => e.preventDefault()}>
                 <label htmlFor="footer-email" className="sr-only">
@@ -146,8 +124,8 @@ export const Footer = () => {
 
         <div className="footer__bottom">
           <div className="footer__copyright">
-            © {new Date().getFullYear()} Simon Cabarcas. Todos los derechos
-            reservados.
+            © {new Date().getFullYear()} Clínica Dental Marón. Todos los
+            derechos reservados.
           </div>
         </div>
       </div>
